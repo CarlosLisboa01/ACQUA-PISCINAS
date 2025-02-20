@@ -6,10 +6,112 @@
     <title>ACQUA PISCINAS - Excelência em Manutenção</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        /* Configurações base responsivas */
         :root {
             --cor-principal: #1a237e;
             --cor-secundaria: #0d47a1;
             --cor-dourada: #c5a572;
+            --spacing-sm: clamp(1rem, 2vw, 2rem);
+            --spacing-md: clamp(2rem, 4vw, 4rem);
+            --spacing-lg: clamp(3rem, 6vw, 6rem);
+            --font-size-base: clamp(1rem, 1.5vw, 1.2rem);
+            --font-size-title: clamp(2.5rem, 5vw, 4rem);
+        }
+
+        /* Configurações responsivas base */
+        body {
+            font-size: var(--font-size-base);
+            overflow-x: hidden;
+        }
+
+        .hero {
+            min-height: 100svh; /* Usando svh para melhor suporte mobile */
+            height: auto;
+            padding: var(--spacing-md);
+        }
+
+        .hero-content h1 {
+            font-size: var(--font-size-title);
+            word-wrap: break-word;
+        }
+
+        .feature-section {
+            padding: var(--spacing-lg) var(--spacing-sm);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+            gap: var(--spacing-md);
+            padding: var(--spacing-lg) var(--spacing-sm);
+        }
+
+        /* Melhorias para touch devices */
+        @media (hover: none) {
+            .gallery-overlay {
+                transform: translateY(0);
+                background: linear-gradient(transparent, rgba(0,0,0,0.8));
+                opacity: 0.9;
+            }
+
+            .feature-card:active {
+                transform: scale(0.98);
+            }
+        }
+
+        /* Ajustes específicos para diferentes tamanhos de tela */
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: clamp(2rem, 8vw, 2.5rem);
+            }
+
+            .gallery-item {
+                height: 300px;
+            }
+
+            .botao-whatsapp {
+                width: 100%;
+                padding: 15px;
+            }
+        }
+
+        @media (min-width: 481px) and (max-width: 768px) {
+            .gallery-item {
+                height: 350px;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .gallery-item {
+                height: 400px;
+            }
+        }
+
+        /* Otimizações para telas grandes */
+        @media (min-width: 1025px) {
+            .feature-grid,
+            .image-gallery {
+                max-width: 1400px;
+                margin: 0 auto;
+            }
+        }
+
+        /* Suporte para dark mode */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: #121212;
+                color: #ffffff;
+            }
+
+            .feature-card {
+                background: #1e1e1e;
+            }
         }
 
         body {
@@ -214,6 +316,50 @@
             font-weight: bold;
             margin: 1rem 0;
         }
+
+        .cta-button-container {
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 1.2rem 2.5rem;
+            background: linear-gradient(135deg, var(--cor-principal), var(--cor-secundaria));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(26, 35, 126, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(26, 35, 126, 0.3);
+        }
+
+        .button-icon {
+            margin-left: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover .button-icon {
+            transform: translateX(5px);
+        }
+
+        @media (max-width: 768px) {
+            .cta-button {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+
+            .cta-button-container {
+                margin-top: 3rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -243,6 +389,12 @@
                 <p>Utilizamos produtos de alta qualidade e técnicas avançadas de limpeza.</p>
             </div>
         </div>
+        <div class="cta-button-container">
+            <a href="antes_depois.html" class="cta-button">
+                Ver Transformações Impressionantes
+                <span class="button-icon">→</span>
+            </a>
+        </div>
     </section>
 
     <section class="image-gallery">
@@ -270,7 +422,6 @@
     </section>
 
     <div class="botao-container">
-        <div class="preco-texto">A partir de R$250</div>
         <a href="https://wa.me/5541998770602" class="botao-whatsapp">
             Fale com um especialista agora! 🏊‍♂️
         </a>
