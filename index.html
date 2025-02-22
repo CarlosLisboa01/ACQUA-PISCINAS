@@ -47,9 +47,25 @@
 
         .image-gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
-            gap: var(--spacing-md);
-            padding: var(--spacing-lg) var(--spacing-sm);
+            grid-template-columns: repeat(3, 1fr); /* 3 colunas no desktop */
+            gap: 30px;
+            padding: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .gallery-image {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         /* Melhorias para touch devices */
@@ -71,8 +87,9 @@
                 font-size: clamp(2rem, 8vw, 2.5rem);
             }
 
-            .gallery-item {
-                height: 300px;
+            .gallery-image {
+                height: 300px; /* Altura menor para mobile */
+                width: 100%;
             }
 
             .botao-whatsapp {
@@ -82,13 +99,13 @@
         }
 
         @media (min-width: 481px) and (max-width: 768px) {
-            .gallery-item {
+            .gallery-image {
                 height: 350px;
             }
         }
 
         @media (min-width: 769px) and (max-width: 1024px) {
-            .gallery-item {
+            .gallery-image {
                 height: 400px;
             }
         }
@@ -158,13 +175,14 @@
             }
 
             .image-gallery {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-                padding: 2rem 1rem;
+                grid-template-columns: 1fr; /* Uma coluna em mobile */
+                gap: 20px;
+                padding: 20px;
             }
 
-            .gallery-item {
-                height: 300px;
+            .gallery-image {
+                height: 300px; /* Altura menor para mobile */
+                width: 100%;
             }
 
             .section-title {
@@ -231,33 +249,6 @@
             margin-bottom: 1rem;
         }
 
-        .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 15px;
-            height: 400px;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
         .gallery-overlay {
             position: absolute;
             bottom: 0;
@@ -270,7 +261,7 @@
             transition: transform 0.3s ease;
         }
 
-        .gallery-item:hover .gallery-overlay {
+        .gallery-image:hover .gallery-overlay {
             transform: translateY(0);
         }
 
@@ -397,29 +388,29 @@
         </div>
     </section>
 
-    <section class="image-gallery">
-        <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7" alt="Piscina limpa">
+    <div class="image-gallery">
+        <div class="gallery-image">
+            <img src="Piscina 1.jfif" alt="Piscina 1">
             <div class="gallery-overlay">
                 <h3>Limpeza Profissional</h3>
                 <p>Mantemos sua piscina sempre impecável</p>
             </div>
         </div>
-        <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd" alt="Tratamento químico">
+        <div class="gallery-image">
+            <img src="Piscina 2.jfif" alt="Piscina 2">
             <div class="gallery-overlay">
                 <h3>Tratamento Químico</h3>
                 <p>Controle preciso do pH e cloro</p>
             </div>
-        </div>
-        <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1529290130-4ca3753253ae" alt="Manutenção completa">
+            </div>
+        <div class="gallery-image">
+            <img src="Piscina 3.jfif" alt="Piscina 3">
             <div class="gallery-overlay">
                 <h3>Manutenção Completa</h3>
                 <p>Cuidado integral com sua piscina</p>
             </div>
         </div>
-    </section>
+    </div>
 
     <div class="botao-container">
         <a href="https://wa.me/5541998770602" class="botao-whatsapp">

@@ -3,94 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antes e Depois - Transformações de Piscinas</title>
+    <title>Transformações | Acqua Piscinas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <section class="before-after-section">
-        <div class="section-header">
-            <h2 class="section-title">Transformações Impressionantes</h2>
-            <p class="section-subtitle">Veja como transformamos piscinas problemáticas em verdadeiros oásis</p>
-        </div>
-        
-        <div class="before-after-grid">
-            <div class="comparison-container">
-                <div class="before-after-item">
-                    <img src="1 SUJO.jfif" alt="Piscina com água verde">
-                    <div class="overlay-label">Antes</div>
-                    <div class="image-description"></div>
-                </div>
-                <div class="before-after-item">
-                    <img src="4 IMUNDO.jfif" alt="Piscina cristalina">
-                    <div class="overlay-label">Antes</div>
-                    <div class="image-description"></div>
-                </div>
-            </div>
-            
-            <div class="comparison-container">
-                <div class="before-after-item">
-                    <img src="1 LIMPO.jfif" alt="Piscina suja">
-                    <div class="overlay-label">Depois</div>
-                    <div class="image-description"></div>
-                </div>
-                <div class="before-after-item">
-                    <img src="4 LIMPO.jfif" alt="Piscina azul">
-                    <div class="overlay-label">Depois</div>
-                    <div class="image-description"></div>
-                </div>
-            </div>
-            
-            <div class="comparison-container">
-                <div class="before-after-item">
-                    <img src="6 SUJO.jfif" alt="Piscina escura">
-                    <div class="overlay-label">Antes</div>
-                    <div class="image-description"></div>
-                </div>
-                <div class="before-after-item">
-                    <img src="7 SUJO.jfif" alt="Piscina limpa">
-                    <div class="overlay-label">Depois</div>
-                    <div class="image-description"></div>
-                </div>
-            </div>
-            
-            <div class="comparison-container">
-                <div class="before-after-item">
-                    <img src="6 LIMPO.jfif" alt="Piscina com folhas">
-                    <div class="overlay-label">Depois</div>
-                    <div class="image-description"></div>
-                </div>
-                <div class="before-after-item">
-                    <img src="7 LIMPO.jfif" alt="Piscina perfeita">
-                    <div class="overlay-label">Depois</div>
-                    <div class="image-description"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="whatsapp-cta">
-        <h3 class="cta-title">Transforme sua piscina também!</h3>
-        <p class="cta-description">Entre em contato agora para um orçamento gratuito</p>
-        <a href="https://wa.me/5541998770602" class="whatsapp-button">
-            <i class="fab fa-whatsapp"></i>
-            Solicitar Orçamento no WhatsApp
-        </a>
-    </div>
-
-    <div class="botao-container">
-        <a href="index.html" class="botao-voltar">
-            <span class="botao-voltar-icone">←</span>
-            <span class="botao-voltar-texto">Voltar para a Página Inicial</span>
-        </a>
-    </div>
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --cor-principal: #1E3A8A;
-            --cor-secundaria: #1E88E5;
-            --cor-dourada: #C5A572;
+            --primary: #002B5B;
+            --secondary: #0056B3;
+            --accent: #25D366;
+            --dark: #111827;
+            --light: #F8FAFC;
         }
 
         * {
@@ -100,246 +22,307 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Inter', sans-serif;
+            background: var(--light);
+            color: var(--dark);
             line-height: 1.6;
-            color: #333;
         }
 
-        .before-after-section {
-            position: relative;
-            padding: 8rem 2rem;
-            background: linear-gradient(135deg, #ffffff, #f8f9fa);
-        }
-
-        .section-header {
-            position: relative;
+        .hero-section {
+            padding: 120px 40px;
             text-align: center;
-            margin-bottom: 5rem;
-            padding-bottom: 2rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            margin-bottom: 60px;
+        }
+
+        .section-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            backdrop-filter: blur(10px);
         }
 
         .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            color: var(--cor-principal);
-            margin-bottom: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 72px;
+            font-weight: 800;
+            margin-bottom: 24px;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: -1px;
+            line-height: 1.1;
         }
 
         .section-subtitle {
-            font-size: 1.2rem;
-            color: #666;
-            max-width: 600px;
+            font-size: 18px;
+            max-width: 700px;
             margin: 0 auto;
-            line-height: 1.6;
+            opacity: 0.9;
+            font-weight: 500;
         }
 
-        .before-after-grid {
+        .transformation-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 4rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 0 40px 80px;
             max-width: 1400px;
             margin: 0 auto;
-            padding: 2rem;
         }
 
-        .comparison-container {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            height: 100%;
-        }
-
-        .before-after-item {
+        .transformation-card {
             position: relative;
-            border-radius: 20px;
+            height: 450px;
+            background: white;
             overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            transition: all 0.4s ease;
-            width: 100%;
-            height: 350px;
+            border-radius: 8px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
-        .before-after-item img {
+        .transformation-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+        }
+
+        .image-comparison {
+            position: relative;
+            height: 100%;
+        }
+
+        .before-image,
+        .after-image {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s ease;
-            display: block;
+            background-size: cover;
+            background-position: center;
+            transition: opacity 0.4s ease;
         }
 
-        .overlay-label {
+        .before-image {
+            z-index: 1;
+            opacity: 1;
+        }
+
+        .after-image {
+            z-index: 0;
+            opacity: 0;
+        }
+
+        .image-label {
             position: absolute;
-            top: 20px;
-            left: 20px;
-            background: linear-gradient(135deg, var(--cor-dourada), #d4af37);
-            color: white;
-            padding: 10px 25px;
-            border-radius: 30px;
+            top: 24px;
+            left: 24px;
+            background: white;
+            color: var(--dark);
+            padding: 12px 24px;
+            font-size: 14px;
             font-weight: 600;
-            z-index: 2;
-        }
-
-        .image-description {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-            color: white;
-            padding: 20px;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
-        }
-
-        .before-after-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .before-after-item:hover img {
-            transform: scale(1.05);
-        }
-
-        .before-after-item:hover .image-description {
-            transform: translateY(0);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            z-index: 3;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
         .whatsapp-cta {
             text-align: center;
-            padding: 6rem 2rem;
-            background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+            padding: 120px 40px;
+            background: var(--light);
+            position: relative;
         }
 
         .cta-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            color: var(--cor-principal);
-            margin-bottom: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: var(--dark);
         }
 
         .cta-description {
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 2rem;
+            font-size: 18px;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #4B5563;
         }
 
         .whatsapp-button {
             display: inline-flex;
             align-items: center;
-            justify-content: center;
             gap: 12px;
-            padding: 1.3rem 3rem;
             background: #25D366;
             color: white;
             text-decoration: none;
-            border-radius: 50px;
+            padding: 20px 40px;
+            font-size: 16px;
             font-weight: 600;
-            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 6px;
             transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
         }
 
         .whatsapp-button:hover {
+            background: #22C15E;
             transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.4);
-            background: #22c35e;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
         }
 
-        .whatsapp-button i {
-            font-size: 1.4rem;
-        }
-
-        .botao-container {
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .botao-voltar {
-            display: inline-flex;
-            align-items: center;
-            padding: 1.2rem 2.5rem;
-            background: linear-gradient(135deg, var(--cor-dourada), #e3c394);
-            color: var(--cor-principal);
+        .back-button {
+            position: fixed;
+            bottom: 40px;
+            left: 40px;
+            background: white;
+            color: var(--dark);
             text-decoration: none;
-            border-radius: 50px;
+            padding: 16px 32px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
             font-weight: 600;
-            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 6px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
-            box-shadow: 0 8px 20px rgba(197, 165, 114, 0.2);
         }
 
-        .botao-voltar:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 25px rgba(197, 165, 114, 0.3);
-        }
-
-        .botao-voltar-icone {
-            margin-right: 12px;
-            transition: transform 0.3s ease;
-        }
-
-        .botao-voltar:hover .botao-voltar-icone {
+        .back-button:hover {
             transform: translateX(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
         }
 
         @media (max-width: 768px) {
-            .before-after-section {
-                padding: 4rem 1rem;
-            }
-
-            .section-title {
-                font-size: 2.5rem;
-            }
-
-            .before-after-grid {
+            .transformation-grid {
                 grid-template-columns: 1fr;
-                gap: 2rem;
-                padding: 1rem;
+                gap: 25px;
+                padding: 0 20px 40px;
             }
 
-            .before-after-item {
-                height: 300px;
+            .transformation-card {
+                height: 400px;
+                width: 100%;
+                margin-bottom: 5px;
             }
 
-            .comparison-container {
-                gap: 1.5rem;
-            }
-
-            .whatsapp-cta {
-                padding: 4rem 1rem;
-            }
-
-            .cta-title {
-                font-size: 2rem;
-            }
-
-            .whatsapp-button {
-                width: 90%;
-                padding: 1.2rem 2rem;
-                font-size: 1.1rem;
-            }
-
-            .botao-voltar {
-                width: 90%;
-                justify-content: center;
+            .before-image,
+            .after-image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
         }
 
-        @media (min-width: 769px) and (max-width: 1024px) {
-            .before-after-grid {
-                gap: 2.5rem;
+        @media (min-width: 769px) {
+            .transformation-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
             }
-
-            .before-after-item {
-                height: 320px;
-            }
-        }
-
-        img {
-            vertical-align: middle;
-            max-width: 100%;
         }
     </style>
+</head>
+<body>
+    <section class="hero-section">
+        <span class="section-badge">Portfólio de Transformações</span>
+        <h1 class="section-title">Antes & Depois</h1>
+        <p class="section-subtitle">Explore nossas transformações mais impressionantes</p>
+    </section>
+
+    <div class="transformation-grid">
+        <!-- Card 1 -->
+        <div class="transformation-card">
+            <div class="image-comparison">
+                <div class="before-image" style="background-image: url('1 SUJO.jfif')"></div>
+                <div class="after-image" style="background-image: url('1 LIMPO.jfif')"></div>
+                <span class="image-label">Antes</span>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="transformation-card">
+            <div class="image-comparison">
+                <div class="before-image" style="background-image: url('4\ IMUNDO.jfif')"></div>
+                <div class="after-image" style="background-image: url('4\ LIMPO.jfif')"></div>
+                <span class="image-label">Antes</span>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="transformation-card">
+            <div class="image-comparison">
+                <div class="before-image" style="background-image: url('5\ SUJO.jfif')"></div>
+                <div class="after-image" style="background-image: url('5\ LIMPO.jfif')"></div>
+                <span class="image-label">Antes</span>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="transformation-card">
+            <div class="image-comparison">
+                <div class="before-image" style="background-image: url('6\ SUJO.jfif')"></div>
+                <div class="after-image" style="background-image: url('6\ LIMPO.jfif')"></div>
+                <span class="image-label">Antes</span>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="transformation-card">
+            <div class="image-comparison">
+                <div class="before-image" style="background-image: url('7\ SUJO.jfif')"></div>
+                <div class="after-image" style="background-image: url('7\ LIMPO.jfif')"></div>
+                <span class="image-label">Antes</span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="whatsapp-cta">
+        <h2 class="cta-title">Transforme Sua Piscina</h2>
+        <p class="cta-description">Deixe-nos criar sua própria história de transformação</p>
+        <a href="https://wa.me/5541998770602" class="whatsapp-button">
+            <i class="fab fa-whatsapp"></i>
+            Solicitar Orçamento
+        </a>
+    </div>
+
+    <a href="index.html" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+        Voltar
+    </a>
+
+    <script>
+        document.querySelectorAll('.transformation-card').forEach(card => {
+            let isShowingAfter = false;
+            
+            card.addEventListener('click', () => {
+                const beforeImage = card.querySelector('.before-image');
+                const afterImage = card.querySelector('.after-image');
+                const label = card.querySelector('.image-label');
+                
+                isShowingAfter = !isShowingAfter;
+                
+                beforeImage.style.opacity = isShowingAfter ? '0' : '1';
+                afterImage.style.opacity = isShowingAfter ? '1' : '0';
+                label.textContent = isShowingAfter ? 'Depois' : 'Antes';
+            });
+        });
+    </script>
 </body>
 </html>
